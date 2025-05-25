@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://fav.farm/🔥" />
+    <title>Console Tricks! 🛠️</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1>Console Tricks! 🛠️</h1>
+    <p class="hint">
+      Click buttons to see console outputs below. Check the console for
+      additional details.
+    </p>
+    <p
+      class="action-text"
+      id="actionText"
+      role="button"
+      aria-label="Toggle action text style"
+    >
+      ×BREAK×DOWN×
+    </p>
+    <div class="container">
+      <div
+        class="exercise"
+        id="exercise1"
+        role="region"
+        aria-label="Regular Log"
+      >
+        <h2>1. Regular Log</h2>
+        <button onclick="logRegular()" aria-label="Log regular message">
+          Log
+        </button>
+        <div class="result" id="logResult"></div>
+      </div>
+      <div
+        class="exercise"
+        id="exercise2"
+        role="region"
+        aria-label="Interpolated Log"
+      >
+        <h2>2. Interpolated Log</h2>
+        <button
+          onclick="logInterpolated()"
+          aria-label="Log interpolated message"
+        >
+          Log
+        </button>
+        <div class="result" id="interpolatedResult"></div>
+      </div>
+      <div
+        class="exercise"
+        id="exercise3"
+        role="region"
+        aria-label="Warning Log"
+      >
+        <h2>3. Warning</h2>
+        <button onclick="logWarning()" aria-label="Log warning message">
+          Warn
+        </button>
+        <div class="result" id="warningResult"></div>
+      </div>
+      <div class="exercise" id="exercise4" role="region" aria-label="Error Log">
+        <h2>4. Error</h2>
+        <button onclick="logError()" aria-label="Log error message">
+          Error
+        </button>
+        <div class="result" id="errorResult"></div>
+      </div>
+      <div class="exercise" id="exercise5" role="region" aria-label="Info Log">
+        <h2>5. Info</h2>
+        <button onclick="logInfo()" aria-label="Log info message">Info</button>
+        <div class="result" id="infoResult"></div>
+      </div>
+      <div
+        class="exercise"
+        id="exercise6"
+        role="region"
+        aria-label="Assert Log"
+      >
+        <h2>6. Assert</h2>
+        <button onclick="logAssert()" aria-label="Log assert message">
+          Assert
+        </button>
+        <div class="result" id="assertResult"></div>
+      </div>
+      <div
+        class="exercise"
+        id="exercise7"
+        role="region"
+        aria-label="View DOM Element"
+      >
+        <h2>7. View DOM Element</h2>
+        <button onclick="viewDOM()" aria-label="View DOM element">View</button>
+        <div class="result" id="domResult"></div>
+      </div>
+      <div
+        class="exercise"
+        id="exercise8"
+        role="region"
+        aria-label="Grouping Dogs"
+      >
+        <h2>8. Grouping Dogs</h2>
+        <button onclick="logGroups()" aria-label="Log grouped dogs">
+          Group
+        </button>
+        <div class="result" id="groupResult"></div>
+      </div>
+      <div class="exercise" id="exercise9" role="region" aria-label="Counting">
+        <h2>9. Counting</h2>
+        <button onclick="logCounts()" aria-label="Log counts">Count</button>
+        <div class="result" id="countResult"></div>
+      </div>
+      <div
+        class="exercise"
+        id="exercise10"
+        role="region"
+        aria-label="Timing Fetch"
+      >
+        <h2>10. Timing Fetch</h2>
+        <button onclick="logTiming()" aria-label="Fetch and time data">
+          Fetch
+        </button>
+        <div class="result" id="timingResult"></div>
+      </div>
+      <div
+        class="exercise"
+        id="exercise11"
+        role="region"
+        aria-label="Table of Dogs"
+      >
+        <h2>11. Table of Dogs</h2>
+        <button onclick="logTable()" aria-label="Log dogs table">Table</button>
+        <div class="result" id="tableResult"></div>
+      </div>
+      <div class="exercise" role="region" aria-label="Clear Console">
+        <h2>Clear Console</h2>
+        <button onclick="clearConsole()" aria-label="Clear console">
+          Clear Console
+        </button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

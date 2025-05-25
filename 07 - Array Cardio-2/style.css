@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+body {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #a020f0;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 3rem;
+  color: #a020f0;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease-in;
+  text-shadow: none;
+}
+
+p.hint {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: #a020f0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #a020f0;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.exercise {
+  background: #ffffff;
+  border: 1px solid #a020f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  animation: slideIn 0.5s ease-in;
+  position: relative;
+  z-index: 2;
+}
+
+.exercise h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #a020f0;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.result {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem;
+  background: rgba(160, 32, 240, 0.1);
+  border-radius: 8px;
+  overflow-x: auto;
+  color: #a020f0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(160, 32, 240, 0.2);
+  color: #a020f0;
+}
+
+th {
+  background: rgba(160, 32, 240, 0.3);
+  text-transform: capitalize;
+}
+
+button {
+  background: #ffffff;
+  color: #a020f0;
+  border: 1px solid #a020f0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #a020f0;
+  color: #ffffff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .container {
+    padding: 1rem;
+  }
+  .exercise {
+    padding: 1rem;
+  }
+  .exercise h2 {
+    font-size: 1.2rem;
+  }
+  .result {
+    font-size: 0.9rem;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

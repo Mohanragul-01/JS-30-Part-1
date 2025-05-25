@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://fav.farm/🔥" />
+    <title>Shift-Check Checkboxes 📋</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1>Shift-Check Checkboxes 📋</h1>
+    <p class="hint">
+      Check a box, hold Shift, and check another to select all in between. Use
+      the button to reset.
+    </p>
+    <div class="inbox" role="list">
+      <div class="item" role="listitem">
+        <input type="checkbox" aria-label="This is an inbox layout" />
+        <p>This is an inbox layout.</p>
+      </div>
+      <div class="item" role="listitem">
+        <input type="checkbox" aria-label="Check one item" />
+        <p>Check one item</p>
+      </div>
+      <div class="item" role="listitem">
+        <input type="checkbox" aria-label="Hold down your Shift key" />
+        <p>Hold down your Shift key</p>
+      </div>
+      <div class="item" role="listitem">
+        <input type="checkbox" aria-label="Check a lower item" />
+        <p>Check a lower item</p>
+      </div>
+      <div class="item" role="listitem">
+        <input
+          type="checkbox"
+          aria-label="Everything in between should also be set to checked"
+        />
+        <p>Everything in between should also be set to checked</p>
+      </div>
+      <div class="item" role="listitem">
+        <input type="checkbox" aria-label="Try do it without any libraries" />
+        <p>Try do it without any libraries</p>
+      </div>
+      <div class="item" role="listitem">
+        <input type="checkbox" aria-label="Just regular JavaScript" />
+        <p>Just regular JavaScript</p>
+      </div>
+      <div class="item" role="listitem">
+        <input type="checkbox" aria-label="Good Luck!" />
+        <p>Good Luck!</p>
+      </div>
+      <div class="item" role="listitem">
+        <input
+          type="checkbox"
+          aria-label="Don't forget to tweet your result!"
+        />
+        <p>Don't forget to tweet your result!</p>
+      </div>
+    </div>
+    <button id="resetButton" aria-label="Reset all checkboxes">
+      Reset Checkboxes
+    </button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

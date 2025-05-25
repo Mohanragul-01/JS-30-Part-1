@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a020f0, #7b16b8),
+    url(https://source.unsplash.com/7bwQXzbF6KE/1500x1500);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-in;
+}
+
+.controls {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #a020f0;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  animation: slideIn 0.5s ease-in;
+}
+
+.controls label {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.controls input[type="range"],
+.controls input[type="color"] {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #a020f0;
+  border-radius: 4px;
+  padding: 0.2rem;
+}
+
+.controls button,
+.controls input[type="checkbox"] + label {
+  background: #a020f0;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.controls button:hover,
+.controls input[type="checkbox"] + label:hover {
+  transform: scale(1.05);
+  background: #7b16b8;
+}
+
+.controls input[type="checkbox"] {
+  display: none;
+}
+
+.controls input[type="checkbox"] + label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.controls input[type="checkbox"]:checked + label {
+  background: #ffffff;
+  color: #a020f0;
+}
+
+canvas {
+  border: 2px solid #a020f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: #ffffff;
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .controls {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .controls button,
+  .controls input[type="checkbox"] + label {
+    font-size: 0.9rem;
+  }
+  canvas {
+    max-height: 60vh;
+  }
+}
